@@ -1,0 +1,37 @@
+app:
+    ms:
+        usurio:
+            url: http://localhost:8080
+server:
+    port: 8080
+user:
+    password:
+        regex: "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+jwt:
+    secret: "a216af8c-7aca-4d22-b221-de32b411a2b0"
+    expiration: 86400000
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:mem:localhost;DB_CLOSE_DELAY=-1
+        username: admin
+        password: admin
+        jpa:
+            database-platform: org.hibernate.dialect.H2Dialect
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                globally_quoted_identifiers: true
+                format_sql: true
+                jdbc:
+                    time_zone: UTC
+            org:
+                hibernate:
+                    envers:
+                        default_schema: public
+                        store_dataAt_delete: true
+    mvc:
+        pathmatch:
+            matching-strategy: ANT_PATH_MATCHER
