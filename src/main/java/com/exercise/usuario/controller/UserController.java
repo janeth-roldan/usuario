@@ -43,14 +43,6 @@ public class UserController {
         return ResponseEntity.ok(userResponse);
     }
 
-   /* @PutMapping("/{id}")
-    public ResponseEntity<Cuenta> completeUpdateCuenta(
-            @PathVariable UUID cuentaId,
-            @RequestBody CuentaRequest cuentaRequest
-    ) {
-        return handleUpdate(cuentaId, cuentaRequest);
-    }*/
-
     @PatchMapping("/{id}")
     public ResponseEntity<Usuario> updatUser(
             @PathVariable UUID id,

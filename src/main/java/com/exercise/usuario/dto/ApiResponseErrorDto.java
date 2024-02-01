@@ -4,8 +4,6 @@ public class ApiResponseErrorDto {
 
     private String message;
 
-    // Constructores, getters y setters
-
     public ApiResponseErrorDto(String message) {
         this.message = message;
     }

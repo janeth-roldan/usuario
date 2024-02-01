@@ -1,6 +1,5 @@
 package com.exercise.usuario.mapper;
 
-
 import com.exercise.usuario.dto.UserRequest;
 import com.exercise.usuario.dto.UserResponse;
 import com.exercise.usuario.model.Usuario;
